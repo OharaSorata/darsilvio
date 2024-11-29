@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Centralizado</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <a href="https://drive.google.com/drive/folders/11l8jZHteD0hY9_wc-iqf4frBntSFYdN2?usp=sharing" class="centralizado" target="_blank">Darsilvio, Clique aqui.</a>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Caro, Darsilvio.</strong>
+                        <p>
+                            O amor de pai é firme, silencioso e cheio de dedicação, ensinando e protegendo, deixando um legado que perdura no tempo.
+                            <a href="https://drive.google.com/drive/folders/11l8jZHteD0hY9_wc-iqf4frBntSFYdN2?usp=sharing">clique aqui darsilvio.</a> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
